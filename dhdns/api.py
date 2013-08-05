@@ -56,4 +56,12 @@ class DHDnsManager():
         self.url += '&cmd=' + _cmd_
 
     def callApi(self):
-        return requests.get(self.url)
+        """
+        Use the requests library to call the Dreamhost API.
+        
+        For the present we will disable the verification of
+        the SSL certificate because there is a problem not
+        recognizing the CA certificate.
+        """
+    
+        return requests.get(self.url, verify=False)
