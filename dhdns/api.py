@@ -3,7 +3,7 @@
 
 import requests
 
-class DHDnsManager():
+class DHDnsManager(object):
     
     def __init__(self, key, format=None):
 
